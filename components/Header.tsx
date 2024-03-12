@@ -1,3 +1,5 @@
+import "@/app/globals.css";
+
 export default async function NavBar() {
   return (
     <div className="bg-eggshell w-screen h-screen flex flex-col items-center justify-center">
