@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import ProjectCard from "@/components/ui/ProjectCard";
 
 export default async function NavBar() {
   return (
@@ -17,6 +18,23 @@ export default async function NavBar() {
         in the realm of development.
       </p>
       <h2 className="">Projects</h2>
+      <div>
+        <ProjectCard
+          title="Automated Inventory Management System"
+          techStack={[
+            "NextJS",
+            "ReactJS",
+            "Typescript",
+            "TailwindCSS",
+            "Supabase",
+          ]}
+          description="Dynamic inventory system for small-scale sari-sari stores, including expiring stocks and top sales"
+          links={[
+            { name: "Repository", url: "https://github.com/NeoGregorio/AIMS" },
+            { name: "Live", url: "https://aims-omega.vercel.app/" },
+          ]}
+        />
+      </div>
     </div>
   );
 }

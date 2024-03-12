@@ -8,6 +8,6 @@ h1 {
 }
 
 h2 {
-    @apply text-[18px] md:text-[25px] mb-1;
+    @apply text-[18px] md:text-[25px] mb-3;
     font-family: var(--font-bagnard);
 }
