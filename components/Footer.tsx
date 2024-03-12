@@ -26,9 +26,9 @@ export default function Footer() {
   ];
 
   return (
-    <div className="bg-bistre max-w-full h-screen flex flex-col items-center justify-center text-eggshell">
-      <h1>have a story to tell?</h1>
-      <p>
+    <div className="bg-bistre max-w-full px-[30px] py-[80px] flex flex-col items-center justify-center text-eggshell">
+      <h1 className="mb-3">have a story to tell?</h1>
+      <p className="mb-10">
         Ready to turn your narrative into a digital masterpiece? Let me help you
         bring it to life.
       </p>

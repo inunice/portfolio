@@ -39,7 +39,7 @@ export default async function NavBar() {
   ];
 
   return (
-    <div className="bg-eggshell max-w-full px-[30px] py-[50px] flex flex-col items-center justify-center text-eerie-black">
+    <div className="bg-eggshell max-w-full px-[30px] py-[80px] flex flex-col items-center justify-center text-eerie-black">
       <h1>my story in code</h1>
       <p className="max-w-[65vh] text-center mb-10">
         In the constantly evolving field of technology, I find joy in adding new
