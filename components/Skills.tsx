@@ -29,13 +29,14 @@ export default async function NavBar() {
     "Bash",
   ];
   const libraries = ["Next.js", "React.js", "Node.js", "Tailwind CSS"];
-  const devtools = ["Git", "PostgreSQL", "MySQL", "WSL", "Playwright"];
+  const devtools = ["Git", "Figma", "PostgreSQL", "MySQL", "WSL", "Playwright"];
   const miscellanous = [
     "Adobe Creative Suite (Ps, Ai, Id, Pr)",
     "Google Workspace",
-    "Figma",
     "Canva",
     "Notion",
+    "LaTeX",
+    "Typst",
   ];
 
   return (
