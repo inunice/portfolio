@@ -18,7 +18,7 @@ export default async function NavBar() {
         in the realm of development.
       </p>
       <h2 className="">Projects</h2>
-      <div>
+      <div className="flex flex-row gap-5">
         <ProjectCard
           title="Automated Inventory Management System"
           techStack={[
@@ -32,6 +32,15 @@ export default async function NavBar() {
           links={[
             { name: "Repository", url: "https://github.com/NeoGregorio/AIMS" },
             { name: "Live", url: "https://aims-omega.vercel.app/" },
+          ]}
+        />
+        <ProjectCard
+          title="LAMOC: Mosquito Observation Channel"
+          techStack={["Python", "HTML", "CSS", "PHP", "MySQL"]}
+          description="Award-winning high school research on a deployable mosquito monitoring device and web app"
+          links={[
+            { name: "Manuscript", url: "/files/LAMOC-Manuscript.pdf" },
+            { name: "Slides", url: "/files/LAMOC-Slides.pdf" },
           ]}
         />
       </div>
