@@ -2,7 +2,7 @@ import "@/app/globals.css";
 
 export default async function NavBar() {
   return (
-    <div className="bg-eggshell w-screen h-screen flex flex-col items-center justify-center">
+    <div className="bg-eggshell max-w-full h-screen flex flex-col items-center justify-center">
       <p className="text-[70px] font-bagnard text-persian-red">
         crafting code, weaving stories.
       </p>
