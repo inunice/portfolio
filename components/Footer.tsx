@@ -1,5 +1,6 @@
 import "@/app/globals.css";
 import Image from "next/image";
+import ViewResume from "@/components/ViewResume";
 
 interface ListItemProps {
   text: string;
@@ -40,11 +41,12 @@ export default function Footer() {
   return (
     <div className="bg-bistre max-w-full px-[30px] py-[80px] flex flex-col items-center justify-center text-eggshell">
       <h1 className="mb-3 text-center">have a story to tell?</h1>
-      <p className="max-w-[45vh] text-center mb-10">
+      <p className="max-w-[45vh] text-center mb-4">
         Ready to turn your narrative into a digital masterpiece? Let me help you
         bring it to life.
       </p>
-      <h2>Let's connect!</h2>
+      <ViewResume />
+      <h2 className="mt-10">Let's connect!</h2>
       <ul className="flex gap-5 text-sm flex-wrap gap-y-1 justify-center underline underline-offset-4 decoration-reseda-green opacity-9">
         {contactDetails.map((item, index) => (
           <ListItem
