@@ -7,9 +7,9 @@ export default async function NavBar() {
       <h1 className="text-center">why do stories matter?</h1>
       <p className="max-w-[65vh] text-center mb-5">
         I've always had a knack and deep appreciation for all forms of
-        storytelling, of how they unconsciously touch the lives of those who
-        consume it, but stories don't just live in adventure novels or musical
-        notes.
+        storytelling; of how they unconsciously touch the lives of those who
+        come across it. But stories don't just live in adventure novels or
+        musical notes.
       </p>
       <p className="max-w-[65vh] text-center mb-10">
         With every click, there's a well-thought-out tale, a connection waiting
