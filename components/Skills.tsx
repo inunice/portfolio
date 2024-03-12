@@ -6,11 +6,13 @@ interface ListComponentProps {
 }
 
 const ListComponent: React.FC<ListComponentProps> = ({ title, items }) => (
-  <div className="flex flex-col items-center">
-    <p className="text-persian-red text-xl font-bagnard">{title}</p>
+  <div className="flex flex-col">
+    <span className="text-persian-red text-lg font-bagnard mb-1">{title}</span>
     <ul>
       {items.map((item, index) => (
-        <li key={index}>{item}</li>
+        <li className="text-sm max-w-[150px]" key={index}>
+          {item}
+        </li>
       ))}
     </ul>
   </div>
@@ -37,19 +39,19 @@ export default async function NavBar() {
   ];
 
   return (
-    <div className="bg-eggshell max-w-full h-screen flex flex-col items-center justify-center text-eerie-black">
+    <div className="bg-eggshell max-w-full px-[30px] py-[50px] flex flex-col items-center justify-center text-eerie-black">
       <h1>my story in code</h1>
-      <p>
+      <p className="max-w-[65vh] text-center mb-10">
         In the constantly evolving field of technology, I find joy in adding new
         tools to my tech stack, bringing fresh perspectives to each project.
         From conceptualizing ideas to implementing solutions, my code tells a
         story of innovation, efficiency, and seamless user experiences.
       </p>
       <h2>Technology Stack</h2>
-      <div className="flex flex-row gap-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-1">
         <ListComponent title="Languages" items={languages} />
         <ListComponent title="Libraries" items={libraries} />
-        <ListComponent title="Developer Tools" items={devtools} />
+        <ListComponent title="Dev Tools" items={devtools} />
         <ListComponent title="Miscellanous" items={miscellanous} />
       </div>
     </div>
