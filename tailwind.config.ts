@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        'bagnard': ['Bagnard', 'sans-serif'], // Add your font name here
+        sans: ['var(--font-openSans)', 'sans-serif'],
+        'bagnard': ['var(--font-bagnard)', 'sans-serif'], // Add your font name here
       },
       colors: {
         "eggshell" : "#FAF3DD",
