@@ -11,6 +11,13 @@ const config: Config = {
       fontFamily: {
         'bagnard': ['Bagnard', 'sans-serif'], // Add your font name here
       },
+      colors: {
+        "eggshell" : "#FAF3DD",
+        "persian-red": "#CC2936",
+        "reseda-green": "#71816D",
+        "bistre": "#342A21",
+        "eerie-black": "#191716",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
