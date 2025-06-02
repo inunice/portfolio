@@ -1,6 +1,6 @@
 <template>
   <section class="work-experience px-6 py-10">
-    <h2 class="text-2xl font-bold mb-6">Work Experience</h2>
+    <h2 class="text-2xl font-bold mb-6 text-coral">🍓 Work Experience</h2>
     <div class="space-y-4">
       <ExperienceItem
         v-for="(item, index) in experiences"
@@ -24,7 +24,7 @@ const experiences = [
   {
     company: 'Enstack Technologies Inc.',
     role: 'Engineering Intern',
-    dates: 'June – August 2024',
+    dates: 'June - August 2024',
     location: 'Bonifacio Global City, Taguig (Onsite)',
     technologies: 'TypeScript, Angular, Ionic, Python, Django, AWS, PostgreSQL, Datadog',
     avatar: 'https://media.licdn.com/dms/image/v2/C4D0BAQHUxRXAjBJUVg/company-logo_200_200/company-logo_200_200/0/1646617553445/enstack_logo?e=1754524800&v=beta&t=z8K9ZSH5NYMokUbt1AglZWiC-lwO3XuRjl0pO4zDYJ0',
