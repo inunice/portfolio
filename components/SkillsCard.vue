@@ -1,3 +1,16 @@
+<script setup>
+import { useIconColors } from "@/composables/useIconColors";
+
+const props = defineProps({
+  index: Number,
+  icon: String,
+  title: String,
+  entries: Array,
+});
+
+const { iconBgColor, iconTextColor } = useIconColors(props.index);
+</script>
+
 <template>
   <div class="flex flex-col gap-2">
     <div class="flex flex-col gap-2 mb-1">
@@ -11,21 +24,8 @@
       </div>
       <h3 class="text-md font-bold leading-tight">{{ title }}</h3>
     </div>
-    <ul class="text-sm text-brown-800 list-none space-y-1">
+    <ul class="text-sm text-wood list-none space-y-1">
       <li v-for="(entry, j) in entries" :key="j">{{ entry }}</li>
     </ul>
   </div>
 </template>
-
-<script setup>
-import { useIconColors } from "@/composables/useIconColors";
-
-const props = defineProps({
-  index: Number,
-  icon: String,
-  title: String,
-  entries: Array,
-});
-
-const { iconBgColor, iconTextColor } = useIconColors(props.index);
-</script>

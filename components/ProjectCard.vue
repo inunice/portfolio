@@ -1,5 +1,6 @@
 <script setup>
 import { useIconColors } from "@/composables/useIconColors";
+
 const props = defineProps({
   index: Number,
   title: String,
@@ -9,6 +10,7 @@ const props = defineProps({
   github: String,
   live: String,
 });
+
 const { iconBgColor, iconTextColor } = useIconColors(props.index);
 </script>
 
