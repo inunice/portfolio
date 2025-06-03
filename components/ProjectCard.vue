@@ -1,3 +1,17 @@
+<script setup>
+import { useIconColors } from "@/composables/useIconColors";
+const props = defineProps({
+  index: Number,
+  title: String,
+  icon: String,
+  description: String,
+  technologies: Array,
+  github: String,
+  live: String,
+});
+const { iconBgColor, iconTextColor } = useIconColors(props.index);
+</script>
+
 <template>
   <div
     class="bg-[#EEEAD7] shadow-sm rounded-lg w-full max-w-3xl mb-6 flex flex-col justify-between transition-transform duration-200 ease-in-out hover:-translate-y-1"
@@ -16,16 +30,14 @@
       </div>
       <p class="text-sm mb-1">{{ description }}</p>
     </div>
+
     <div>
       <div class="flex flex-wrap gap-1 mb-4 px-6">
-        <BadgeTechnology
-          calss
-          v-for="(tech, index) in technologies"
-          :key="index"
-        >
+        <UiBadgeTechnology v-for="(tech, index) in technologies" :key="index">
           {{ tech }}
-        </BadgeTechnology>
+        </UiBadgeTechnology>
       </div>
+
       <div
         class="flex flex-wrap gap-4 mt-2 bg-[#FFDFA0] px-6 py-4 rounded-b-lg"
       >
@@ -39,6 +51,7 @@
           <Icon name="grommet-icons:github" />
           Repository
         </a>
+
         <a
           v-if="live"
           :href="live"
@@ -53,18 +66,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import BadgeTechnology from "./ui/BadgeTechnology.vue";
-import { useIconColors } from "@/composables/useIconColors";
-const props = defineProps({
-  index: Number,
-  title: String,
-  icon: String,
-  description: String,
-  technologies: Array,
-  github: String,
-  live: String,
-});
-const { iconBgColor, iconTextColor } = useIconColors(props.index);
-</script>

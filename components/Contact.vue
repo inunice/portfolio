@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-[60vh] max-w-4xl mx-auto px-4">
+  <section class="max-w-4xl mx-auto px-4">
     <div
       class="flex flex-col items-center justify-center text-center mb-10 gap-0"
     >

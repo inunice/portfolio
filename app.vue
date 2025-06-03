@@ -1,9 +1,8 @@
 <template>
-  <div class="flex flex-col">
-    <Header />
+  <Header />
+  <div class="flex flex-col gap-30 mb-30">
     <Projects />
     <Skills />
     <Contact />
   </div>
-  <!-- <Education /> -->
 </template>
