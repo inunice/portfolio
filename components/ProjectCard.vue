@@ -3,7 +3,17 @@
     class="bg-[#EEEAD7] shadow-sm rounded-lg w-full max-w-3xl mb-6 flex flex-col justify-between transition-transform duration-200 ease-in-out hover:-translate-y-1"
   >
     <div class="p-6 flex flex-col">
-      <h3 class="text-xl font-bold text-persian mb-2">{{ title }}</h3>
+      <div class="flex flex-row gap-2 mb-4">
+        <div
+          :class="[
+            'w-7 h-7 rounded-lg flex items-center justify-center shadow-inner',
+            iconBgColor,
+          ]"
+        >
+          <Icon :name="icon" :class="['text-lg', iconTextColor]" />
+        </div>
+        <h3 class="text-xl font-bold text-persian mb-2">{{ title }}</h3>
+      </div>
       <p class="text-sm mb-1">{{ description }}</p>
     </div>
     <div>
@@ -22,20 +32,22 @@
         <a
           v-if="github"
           :href="github"
-          class="text-ocean font-bold hover:underline"
+          class="inline-flex items-center gap-1 text-ocean font-bold hover:underline text-sm"
           target="_blank"
           rel="noopener noreferrer"
         >
-          GitHub →
+          <Icon name="grommet-icons:github" />
+          Repository
         </a>
         <a
           v-if="live"
           :href="live"
-          class="text-ocean font-bold hover:underline"
+          class="inline-flex items-center gap-1 text-ocean font-bold hover:underline text-sm"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Live →
+          <Icon name="lucide:external-link" />
+          Live
         </a>
       </div>
     </div>
@@ -45,11 +57,25 @@
 <script setup>
 import BadgeTechnology from "./ui/BadgeTechnology.vue";
 
-defineProps({
+const props = defineProps({
+  index: Number,
   title: String,
+  icon: String,
   description: String,
   technologies: Array,
   github: String,
   live: String,
+});
+
+import { computed } from "vue";
+
+const iconBgColor = computed(() => {
+  const colors = ["bg-lilac", "bg-mustard", "bg-algae"];
+  return colors[props.index % colors.length] || "bg-coral";
+});
+
+const iconTextColor = computed(() => {
+  const lightBgIndexes = [1, 2, 3];
+  return lightBgIndexes.includes(props.index % 3) ? "text-wood" : "text-white";
 });
 </script>

@@ -1,5 +1,5 @@
 <template>
   <Header />
   <Projects />
-  <Education />
+  <!-- <Education /> -->
 </template>

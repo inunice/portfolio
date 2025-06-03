@@ -2,12 +2,16 @@
 @import "@nuxt/ui";
 
 @theme {
-    --color-coral: #EE758A;
-    --color-tea: #68B894;
-    --color-cream: #fcf9ed;
-    --color-ocean: #007C74;
-    --color-wood: #3d2b10;
-    --font-display: "Quicksand", "sans-serif";
+  --color-coral: #ee758a;
+  --color-tea: #68b894;
+  --color-cream: #fcf9ed;
+  --color-ocean: #007c74;
+  --color-wood: #3d2b10;
+  --font-display: "Quicksand", "sans-serif";
+
+  --color-lilac: #b87cee;
+  --color-mustard: #ecdf53;
+  --color-algae: #d1da49;
 }
 
 :root {
