@@ -1,4 +1,5 @@
 <template>
-    <Header/>
-    <Experience/>
+  <Header />
+  <Projects />
+  <Education />
 </template>
