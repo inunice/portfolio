@@ -5,7 +5,7 @@
     >
       <div class="flex flex-row justify-center gap-3">
         <div
-          class="w-10 h-10 rounded-lg flex items-center justify-center shadow-inner bg-tea"
+          class="w-10 h-10 rounded-lg flex items-center justify-center shadow-inner bg-coral"
         >
           <Icon name="lucide-lab:floppy-disk-2" class="text-white text-2xl" />
         </div>

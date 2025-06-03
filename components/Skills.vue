@@ -5,7 +5,7 @@
     >
       <div class="flex flex-row justify-center gap-3">
         <div
-          class="w-10 h-10 rounded-lg flex items-center justify-center shadow-inner bg-ocean"
+          class="w-10 h-10 rounded-lg flex items-center justify-center shadow-inner bg-tea"
         >
           <Icon name="lucide:hammer" class="text-white text-2xl" />
         </div>
