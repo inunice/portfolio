@@ -1,4 +1,3 @@
-<script lang="ts">
 import { computed } from "vue";
 
 export function useIconColors(index: number) {
@@ -17,4 +16,3 @@ export function useIconColors(index: number) {
     iconTextColor,
   };
 }
-</script>
