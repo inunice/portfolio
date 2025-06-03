@@ -1,10 +1,16 @@
 <script setup>
 import { useIconColors } from "@/composables/useIconColors";
+import { computed } from "vue";
+
+import teddycare from "@/assets/projects/teddycare.png";
+import povertyparenting from "@/assets/projects/povertyparenting.png";
+import lakbayan from "@/assets/projects/lakbayan.png";
 
 const props = defineProps({
   index: Number,
   title: String,
   icon: String,
+  photo: String,
   description: String,
   technologies: Array,
   github: String,
@@ -12,14 +18,30 @@ const props = defineProps({
 });
 
 const { iconBgColor, iconTextColor } = useIconColors(props.index);
+
+const photoMap = {
+  teddycare,
+  povertyparenting,
+  lakbayan,
+};
+
+const photoUrl = computed(() => photoMap[props.photo] || "");
 </script>
 
 <template>
   <div
-    class="bg-[#EEEAD7] shadow-sm rounded-lg w-full max-w-3xl mb-6 flex flex-col justify-between transition-transform duration-200 ease-in-out hover:-translate-y-1"
+    class="bg-[#EEEAD7] shadow-sm rounded-lg w-full max-w-3xl flex flex-col justify-between transition-transform duration-200 ease-in-out hover:-translate-y-1"
   >
+    <div v-if="photo" class="flex justify-center">
+      <img
+        :src="photoUrl"
+        alt="Project screenshot"
+        class="w-full h-auto rounded-t-lg object-cover"
+      />
+    </div>
+
     <div class="p-6 flex flex-col">
-      <div class="flex flex-row gap-2 mb-4">
+      <div class="flex flex-row gap-2 mb-3">
         <div
           :class="[
             'w-7 h-7 rounded-lg flex items-center justify-center shadow-inner',
@@ -28,7 +50,7 @@ const { iconBgColor, iconTextColor } = useIconColors(props.index);
         >
           <Icon :name="icon" :class="['text-lg', iconTextColor]" />
         </div>
-        <h3 class="text-xl font-bold text-persian mb-2">{{ title }}</h3>
+        <h3 class="text-xl font-bold">{{ title }}</h3>
       </div>
       <p class="text-sm mb-1">{{ description }}</p>
     </div>
