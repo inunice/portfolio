@@ -56,7 +56,7 @@
 
 <script setup>
 import BadgeTechnology from "./ui/BadgeTechnology.vue";
-
+import { useIconColors } from "@/composables/useIconColors";
 const props = defineProps({
   index: Number,
   title: String,
@@ -66,16 +66,5 @@ const props = defineProps({
   github: String,
   live: String,
 });
-
-import { computed } from "vue";
-
-const iconBgColor = computed(() => {
-  const colors = ["bg-lilac", "bg-mustard", "bg-algae"];
-  return colors[props.index % colors.length] || "bg-coral";
-});
-
-const iconTextColor = computed(() => {
-  const lightBgIndexes = [1, 2, 3];
-  return lightBgIndexes.includes(props.index % 3) ? "text-wood" : "text-white";
-});
+const { iconBgColor, iconTextColor } = useIconColors(props.index);
 </script>
